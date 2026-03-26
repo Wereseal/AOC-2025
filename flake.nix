@@ -12,11 +12,11 @@
       pkgs = import nixpkgs { inherit system; };
     in pkgs.mkShell {
       packages = with pkgs; [
-	    rustlings
+	    cargo 
       ];
 
       shellHook = ''
-	    rustlings --version
+	    cargo --version
 	    echo "Loaded into shell."
       '';
     };
